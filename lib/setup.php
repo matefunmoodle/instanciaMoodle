@@ -151,11 +151,7 @@ if (!isset($CFG->dataroot)) {
     echo('Fatal error: $CFG->dataroot is not specified in config.php! Exiting.'."\n");
     exit(1);
 }
-echo($CFG->dataroot)
-echo("<br/>\n")
-
 $CFG->dataroot = realpath($CFG->dataroot);
-echo($CFG->dataroot)
 if ($CFG->dataroot === false) {
     if (isset($_SERVER['REMOTE_ADDR'])) {
         header($_SERVER['SERVER_PROTOCOL'] . ' 503 Service Unavailable');
